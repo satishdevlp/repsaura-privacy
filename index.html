@@ -1,1 +1,680 @@
-index
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — RepsAura</title>
+<style>
+/* ── Tokens ── */
+:root {
+  --bg:          #F2F7FD;
+  --surface:     #FFFFFF;
+  --text:        #0A1628;
+  --text-muted:  #4A5E78;
+  --text-faint:  #7A93B0;
+  --accent:      #00AAFF;
+  --accent-dim:  #E4F4FF;
+  --accent-mid:  #0080CC;
+  --border:      #C8DCEF;
+  --border-faint:#E0EEF8;
+  --rule:        #00AAFF;
+  --nav-active:  #00AAFF;
+  --nav-hover:   #E4F4FF;
+  --radius:      10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:          #070F1C;
+    --surface:     #0D1A2E;
+    --text:        #D8EBFF;
+    --text-muted:  #6888A8;
+    --text-faint:  #3A5878;
+    --accent:      #00BBFF;
+    --accent-dim:  #081624;
+    --accent-mid:  #00AAFF;
+    --border:      #1A2E48;
+    --border-faint:#0F1F33;
+    --rule:        #00AAFF;
+    --nav-active:  #00BBFF;
+    --nav-hover:   #0D1E30;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg:          #F2F7FD;
+  --surface:     #FFFFFF;
+  --text:        #0A1628;
+  --text-muted:  #4A5E78;
+  --text-faint:  #7A93B0;
+  --accent:      #00AAFF;
+  --accent-dim:  #E4F4FF;
+  --accent-mid:  #0080CC;
+  --border:      #C8DCEF;
+  --border-faint:#E0EEF8;
+  --rule:        #00AAFF;
+  --nav-active:  #00AAFF;
+  --nav-hover:   #E4F4FF;
+}
+
+:root[data-theme="dark"] {
+  --bg:          #070F1C;
+  --surface:     #0D1A2E;
+  --text:        #D8EBFF;
+  --text-muted:  #6888A8;
+  --text-faint:  #3A5878;
+  --accent:      #00BBFF;
+  --accent-dim:  #081624;
+  --accent-mid:  #00AAFF;
+  --border:      #1A2E48;
+  --border-faint:#0F1F33;
+  --rule:        #00AAFF;
+  --nav-active:  #00BBFF;
+  --nav-hover:   #0D1E30;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.wordmark-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.wordmark-icon svg { display: block; }
+.wordmark-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.4px;
+}
+.wordmark-text span { color: var(--accent); }
+.header-meta {
+  font-size: 12px;
+  color: var(--text-faint);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* ── Layout ── */
+.layout {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0 48px;
+  align-items: start;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  position: sticky;
+  top: 88px;
+  padding-bottom: 24px;
+}
+.sidebar-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding: 0 12px;
+  margin-bottom: 8px;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.nav-list a {
+  display: block;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 7px;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1.4;
+}
+.nav-list a:hover { background: var(--nav-hover); color: var(--text); }
+.nav-list a.active {
+  color: var(--nav-active);
+  font-weight: 700;
+  background: var(--accent-dim);
+}
+
+/* ── Content ── */
+.content { min-width: 0; }
+.page-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  color: var(--text);
+  text-wrap: balance;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.page-intro {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 560px;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+/* ── Sections ── */
+.policy-section {
+  margin-bottom: 48px;
+  scroll-margin-top: 100px;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-faint);
+}
+.section-num {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.section-title {
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+  color: var(--text);
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.section-body { color: var(--text); }
+.section-body p {
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  max-width: 62ch;
+}
+.section-body p:last-child { margin-bottom: 0; }
+.section-body h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin: 22px 0 8px;
+}
+
+/* ── Data table ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin: 18px 0 8px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.data-table th {
+  background: var(--accent-dim);
+  color: var(--accent-mid);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  text-align: left;
+}
+.data-table td {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border-faint);
+  color: var(--text-muted);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.data-table tr:first-child td { border-top: none; }
+.data-table td:first-child {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* ── List styles ── */
+.policy-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0 16px;
+}
+.policy-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.policy-list li::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+/* ── Highlight block ── */
+.highlight-block {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 18px;
+  margin: 18px 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.highlight-block strong { color: var(--text); }
+
+/* ── Contact block ── */
+.contact-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-top: 12px;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.contact-block:hover { border-color: var(--accent); background: var(--accent-dim); }
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-label { display: flex; flex-direction: column; }
+.contact-label-top {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.contact-label-email { font-size: 14px; font-weight: 600; color: var(--accent); }
+
+/* ── Footer ── */
+.page-footer {
+  border-top: 1px solid var(--border-faint);
+  padding: 28px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-faint);
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* ── Mobile ── */
+@media (max-width: 720px) {
+  .site-header { padding: 16px 20px; }
+  .header-meta { display: none; }
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 24px 20px 60px;
+    gap: 0;
+  }
+  .sidebar { position: static; margin-bottom: 32px; }
+  .sidebar-label { display: none; }
+  .nav-list { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+  .nav-list a {
+    padding: 5px 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 12px;
+  }
+  .nav-list a.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    font-weight: 700;
+  }
+  .page-title { font-size: 24px; }
+  .section-title { font-size: 17px; }
+  .data-table { font-size: 13px; }
+  .data-table td:first-child { white-space: normal; }
+  .data-table-wrap { overflow-x: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="#">
+    <div class="wordmark-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M6 4C6 4 4 8 4 12C4 16 6 20 6 20" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M18 4C18 4 20 8 20 12C20 16 18 20 18 20" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <rect x="6" y="10" width="12" height="4" rx="2" fill="#fff"/>
+      </svg>
+    </div>
+    <span class="wordmark-text">Reps<span>Aura</span></span>
+  </a>
+  <span class="header-meta">Last updated · July 23, 2026</span>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <p class="sidebar-label">Contents</p>
+    <ul class="nav-list" id="nav-list">
+      <li><a href="#intro" class="active">Introduction</a></li>
+      <li><a href="#collect">Information We Collect</a></li>
+      <li><a href="#use">How We Use It</a></li>
+      <li><a href="#storage">Storage &amp; Security</a></li>
+      <li><a href="#sharing">Sharing</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-intro">
+      This policy explains how <strong>RepsAura</strong> ("we", "our", or "us") collects, uses, and safeguards the information you provide when using our fitness tracking application. By using RepsAura, you agree to the practices described here.
+    </p>
+
+    <section class="policy-section" id="intro">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Introduction</h2>
+      </div>
+      <div class="section-body">
+        <p>RepsAura is a personal fitness and nutrition tracking application available on Android. Our mission is to help you build better habits through data you own and control. We are committed to being transparent about what we collect and why.</p>
+        <p>This Privacy Policy applies to all users of the RepsAura mobile application and any related services. If you have questions about any part of this policy, contact us at any time using the information in Section 10.</p>
+        <div class="highlight-block">
+          <strong>Plain-language summary:</strong> We collect the data you enter to make the app work. We do not sell your personal data. We do not share it with advertisers. You can request deletion of your account and all associated data at any time.
+        </div>
+      </div>
+    </section>
+
+    <section class="policy-section" id="collect">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Information We Collect</h2>
+      </div>
+      <div class="section-body">
+        <h4>Account Information</h4>
+        <ul class="policy-list">
+          <li>Email address and password (used to create and authenticate your account)</li>
+          <li>Display name and optional profile photo</li>
+          <li>Referral code generated uniquely for your account</li>
+        </ul>
+
+        <h4>Fitness &amp; Health Data</h4>
+        <ul class="policy-list">
+          <li>Exercise logs: workout sessions, exercises performed, sets, reps, and weights</li>
+          <li>Personal records (PRs) for individual exercises</li>
+          <li>Route data and GPS coordinates collected during outdoor activity tracking (Walk, Run, Cycling) — only while the GPS feature is actively enabled</li>
+          <li>Progress photos you choose to upload, tagged by body part and date</li>
+          <li>Body weight measurements and goals (weight gain, loss, or maintenance)</li>
+        </ul>
+
+        <h4>Nutrition Data</h4>
+        <ul class="policy-list">
+          <li>Foods you add to your personal food list, including nutritional values and price</li>
+          <li>Daily calorie and macronutrient logs</li>
+          <li>Meal times and food quantities</li>
+          <li>AI-generated recipes and any notes saved within the AI Recipe Chef feature</li>
+        </ul>
+
+        <h4>Usage &amp; Technical Data</h4>
+        <ul class="policy-list">
+          <li>Device push notification token (for workout reminders and app alerts)</li>
+          <li>Subscription status and purchase receipt tokens processed via Google Play</li>
+          <li>App usage patterns (which features you access) to improve the product</li>
+          <li>Personal notes you write within the app</li>
+        </ul>
+
+        <h4>Community Data</h4>
+        <ul class="policy-list">
+          <li>Posts, comments, and reactions you share in community feeds or groups</li>
+          <li>Your public profile information if you choose to make it visible</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="use">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">How We Use Your Information</h2>
+      </div>
+      <div class="section-body">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Purpose</th><th>Data used</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Provide core app functionality</td><td>All fitness, nutrition, and account data you enter</td></tr>
+              <tr><td>Sync data across sessions</td><td>Account credentials, exercise and food logs</td></tr>
+              <tr><td>Display personalised statistics and graphs</td><td>Workout history, calorie logs, body metrics</td></tr>
+              <tr><td>Send push notifications</td><td>Device notification token</td></tr>
+              <tr><td>Manage subscriptions &amp; referrals</td><td>Email, purchase tokens, referral codes</td></tr>
+              <tr><td>Serve AI Recipe Chef suggestions</td><td>Dietary preferences; processed by our backend, not stored beyond the session unless you save a recipe</td></tr>
+              <tr><td>Show community content</td><td>Posts, public profile, groups</td></tr>
+              <tr><td>Improve app performance</td><td>Anonymised usage patterns and crash reports</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>We do <strong>not</strong> use your data to build advertising profiles, sell to data brokers, or train third-party machine learning models.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="storage">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Data Storage &amp; Security</h2>
+      </div>
+      <div class="section-body">
+        <p>Your data is stored on servers hosted via <strong>Render</strong> (render.com), a managed cloud infrastructure provider based in the United States. Data in transit is encrypted using TLS 1.2 or higher. Passwords are hashed using industry-standard algorithms and are never stored in plain text.</p>
+        <p>Progress photos are stored securely and are only accessible to your account. GPS route data is retained on our servers and is never shared with third parties for advertising or analytics purposes.</p>
+        <div class="highlight-block">
+          While we implement reasonable technical and organisational measures to protect your data, no system is completely secure. We encourage you to use a strong, unique password and to contact us immediately if you suspect unauthorised access.
+        </div>
+        <p>Data is retained for as long as your account is active. If you delete your account, we will remove your personal data from our systems within 30 days, except where we are required to retain it by law.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="sharing">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Sharing Your Information</h2>
+      </div>
+      <div class="section-body">
+        <p>We do not sell, rent, or trade your personal information. We share data only in these circumstances:</p>
+        <ul class="policy-list">
+          <li><strong>With service providers</strong> who process data on our behalf under data processing agreements (see Section 6 for the full list)</li>
+          <li><strong>With other users</strong> only for content you explicitly make public in the Community section</li>
+          <li><strong>For legal compliance</strong> if required by applicable law, court order, or to protect the safety of our users</li>
+          <li><strong>In a business transfer</strong> if RepsAura is acquired or merges with another entity — you will be notified in advance</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="third-party">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Third-Party Services</h2>
+      </div>
+      <div class="section-body">
+        <p>RepsAura integrates with the following third-party services to deliver features. Each has its own privacy policy.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Service</th><th>Purpose</th><th>Data shared</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Google Play Billing</td><td>In-app subscriptions &amp; payments</td><td>Purchase tokens; no payment card data is stored by RepsAura</td></tr>
+              <tr><td>Firebase Cloud Messaging</td><td>Push notifications</td><td>Device FCM token</td></tr>
+              <tr><td>USDA FoodData Central API</td><td>Food search &amp; nutrition database</td><td>Search query text only; no account data</td></tr>
+              <tr><td>Carto (CartoDB)</td><td>Map tiles for GPS route tracker</td><td>Tile requests only; no user identifiers</td></tr>
+              <tr><td>Render</td><td>Backend hosting &amp; database</td><td>All app data stored on their infrastructure</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="policy-section" id="rights">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Your Rights &amp; Choices</h2>
+      </div>
+      <div class="section-body">
+        <p>You have control over your data at all times:</p>
+        <ul class="policy-list">
+          <li><strong>Access &amp; export</strong> — you can view all data you have entered directly within the app</li>
+          <li><strong>Correction</strong> — you can edit any information in your profile or logs at any time</li>
+          <li><strong>Deletion</strong> — you can delete individual logs, photos, or your entire account from Settings → Delete Account</li>
+          <li><strong>Notifications</strong> — you can disable push notifications at any time via your device settings or within the app</li>
+          <li><strong>GPS tracking</strong> — location data is only collected when you explicitly enable GPS tracking for an activity; you can turn it off at any time</li>
+          <li><strong>Community visibility</strong> — you control whether your profile is public or private</li>
+        </ul>
+        <p>If you are located in the European Economic Area (EEA), the United Kingdom, or California, you may have additional rights under GDPR, UK GDPR, or CCPA respectively. To exercise any of these rights, contact us at <strong>repsaurasupport@gmail.com</strong>.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="children">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Children's Privacy</h2>
+      </div>
+      <div class="section-body">
+        <p>RepsAura is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at <strong>repsaurasupport@gmail.com</strong> and we will delete the information promptly.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="changes">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2 class="section-title">Changes to This Policy</h2>
+      </div>
+      <div class="section-body">
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we make material changes, we will notify you by updating the "Last updated" date at the top of this page and, where appropriate, sending a notification through the app.</p>
+        <p>Your continued use of RepsAura after any changes take effect constitutes acceptance of the updated policy. We encourage you to review this page periodically.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="section-body">
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please reach out. We aim to respond within 5 business days.</p>
+        <a class="contact-block" href="mailto:repsaurasupport@gmail.com">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="4" width="20" height="16" rx="3" stroke="#fff" stroke-width="1.8"/>
+              <path d="M2 7l10 7 10-7" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="contact-label">
+            <span class="contact-label-top">Email Support</span>
+            <span class="contact-label-email">repsaurasupport@gmail.com</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="page-footer">
+  © 2026 RepsAura · All rights reserved · <a href="mailto:repsaurasupport@gmail.com" style="color:var(--accent);text-decoration:none;">repsaurasupport@gmail.com</a>
+</footer>
+
+<script>
+(function () {
+  const sections = document.querySelectorAll('.policy-section');
+  const links    = document.querySelectorAll('#nav-list a');
+
+  function setActive(id) {
+    links.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+    },
+    { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+  );
+
+  sections.forEach(s => observer.observe(s));
+})();
+</script>
+
+</body>
+</html>
